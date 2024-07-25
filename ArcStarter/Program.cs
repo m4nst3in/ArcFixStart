@@ -1,20 +1,14 @@
-﻿using System;
-using System.Diagnostics;
-using System.IO;
+﻿using System.Diagnostics;
 
 class Program
 {
 	static void Main(string[] args)
 	{
-		// Caminho da pasta a ser apagada usando o perfil do usuário
 		string pastaParaApagar = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), @"AppData\Local\Packages\TheBrowserCompany.Arc_ttt1ap7aakyb4\LocalCache\Local\firestore\Arc");
-
-		// Caminho do executável a ser executado usando o perfil do usuário
 		string caminhoExecutavel = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), @"AppData\Local\Microsoft\WindowsApps\Arc.exe");
 
 		try
 		{
-			// Apagar a pasta
 			if (Directory.Exists(pastaParaApagar))
 			{
 				Directory.Delete(pastaParaApagar, true);
@@ -25,10 +19,8 @@ class Program
 				Console.WriteLine("A pasta não existe.");
 			}
 
-			// Verificar se o executável existe
 			if (File.Exists(caminhoExecutavel))
 			{
-				// Executar o .exe
 				ProcessStartInfo startInfo = new ProcessStartInfo
 				{
 					FileName = caminhoExecutavel,
