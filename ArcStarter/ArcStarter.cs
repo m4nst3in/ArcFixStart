@@ -4,8 +4,8 @@ class Program
 {
 	static void Main(string[] args)
 	{
-		string pastaParaApagar = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), @"AppData\Local\Packages\TheBrowserCompany.Arc_ttt1ap7aakyb4\LocalCache\Local\firestore\Arc");
-		string caminhoExecutavel = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), @"AppData\Local\Microsoft\WindowsApps\Arc.exe");
+		var pastaParaApagar = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), @"AppData\Local\Packages\TheBrowserCompany.Arc_ttt1ap7aakyb4\LocalCache\Local\firestore\Arc");
+		var caminhoExecutavel = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), @"AppData\Local\Microsoft\WindowsApps\Arc.exe");
 
 		try
 		{
